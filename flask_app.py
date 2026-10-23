@@ -13,3 +13,7 @@ def presentation():
 @app.get("/loisirs")
 def loisirs():
     return "Mes loisirs sont la rando, l'automobile et les voyages !"
+    
+@app.get("/bonjour/<prenom>")
+def bonjour(prenom):
+    return f"<h1>Bonjour {prenom} !</h1>"
