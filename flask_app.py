@@ -7,8 +7,7 @@
 #  Vous allez le compléter petit à petit, exercice après exercice.
 #  Les consignes sont dans le dossier "exercices/".
 # ---------------------------------------------------------------
-
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
