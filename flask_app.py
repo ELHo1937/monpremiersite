@@ -24,9 +24,15 @@ def accueil():
 # ---------------------------------------------------------------
 #  Ajoutez vos nouvelles routes ci-dessous 👇
 # ---------------------------------------------------------------
+# Ajoutez vos nouvelles routes ci-dessous 👇
+
 @app.get("/presentation")
 def presentation():
-    return "Je m'appelle hocine et je suis étudiant en informatique."
+    return "Je m'appelle Hocine et je suis étudiant en informatique."
+
+@app.get("/loisirs")
+def loisirs():
+    return "Mes loisirs sont la rando, l'automobile et les voyages !"
 
 
 # ---------------------------------------------------------------
