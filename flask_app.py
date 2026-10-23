@@ -46,3 +46,21 @@ def salut():
         prenom = request.args.get("prenom", "inconnu")
         ville = request.args.get("ville", "nulle part")
     return f"Bonjour {prenom}, qui vient de {ville} ! (reçu en {request.method})"
+
+
+# 3xx : une redirection
+@app.get("/home")
+def home():
+    return redirect("/")
+
+
+# 4xx : un accès interdit
+@app.get("/secret")
+def secret():
+    abort(403)
+
+
+# Une page d'erreur 404 personnalisée
+@app.errorhandler(404)
+def page_introuvable(erreur):
+    return render_template("404.html"), 404
