@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, abort
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -64,3 +64,5 @@ def secret():
 @app.errorhandler(404)
 def page_introuvable(erreur):
     return render_template("404.html"), 404
+
+
