@@ -68,3 +68,13 @@ def moi():
         navigateur=request.headers.get("User-Agent"),
         langues=request.headers.get("Accept-Language"),
         entetes=request.headers,)
+
+
+@app.get("/moi")
+def moi():
+    return render_template(
+        "moi.html",
+        ip=request.headers.get("X-Real-IP", request.remote_addr),
+        navigateur=request.headers.get("User-Agent"),
+        langues=request.headers.get("Accept-Language"),
+        entetes=request.headers,)
